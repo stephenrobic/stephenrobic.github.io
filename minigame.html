@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cool Little Game</title>
+
+<script type ="text/javascript">
+
+var movement = 0;
+
+/* function moveSquare(){
+    movement += 5;
+    document.getElementById("bob").style.position= "relative";
+    document.getElementById("bob").style.left = movement + "px";
+} */
+
+document.onkeydown=function(e)
+{
+    var e=e||window.event;
+
+    if(e.keyCode==65){
+        //move left (A key)
+        movement += 5;
+        document.getElementById("bob").style.position= "relative";
+        document.getElementById("bob").style.left = movement + "px";
+    }
+    if(e.keyCode==68){
+        //move right (D key)
+        movement += 5;
+        document.getElementById("bob").style.position= "relative";
+        document.getElementById("bob").style.right = movement + "px";
+    }
+    if(e.keyCode==87){
+        //move up (W key)
+    }
+    if(e.keyCode==83){
+        //move down (S key)
+        
+    }
+}
+
+
+
+</script>
+
+</head>
+
+
+<body>
+
+    <button onclick = "moveSquare()">MOVE</button>
+
+    <div id="bob" style ="width:100px; height:100px; background-color:greenyellow;"></div>
+
+    <a href = "index.html"> CLICK ME TO GO HOME </a>
+
+</body>
+
+</html>
+
+<!-- COMMENT ANYTHING HERE -->

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Stephens Cool Website</title>
+	<link href = "main.css" rel= "stylesheet" type = "text/css" />
+	<script type = "text/javascript">
+
+		var nothing = "There's absolutely nothing here yet!!!";
+
+		function change(){
+			document.getElementById("contentTxt").innerHTML = "<p>" + nothing + "</p>";
+		}
+
+
+		function blob(){
+			var1 = document.getElementById(myInput1).value;
+			var2 = document.getElementById(myInput2).value;
+			console.log(var1*var2);
+		} /* console logging...when press F12 */
+
+		window.onload= function(){
+			alert("YOU MAY ONLY ENTER WITH GOOD INTENTIONS");
+		}   /* Prompt as soon as page loads */
+
+		/* window.onload = function(){
+			x = prompt("What is your name?");
+			console.log(x);
+		} */
+
+		function calculate(){
+			inp1 = document.getElementById("myInput1").value;
+			inp2 = document.getElementById("myInput2").value;
+
+			console.log(inp1);
+			console.log(inp2);
+			console.log(inp1 + inp2); 
+
+			if (inp1 == "Makayla" && inp2 == "Tony"){
+				alert("Time for school!!!")
+			}
+			else{
+				alert("Who are you, stranger?")
+			} 
+			} /* Prompt when entering specific things in myInput
+			 defined below and clicking button*/
+
+	</script>
+</head>
+
+<body>
+<div id = "wrapper">
+
+<header></header>
+
+<!-- <ul id= "bob">                                     
+	<li>	<a href = "#"> Contact </a>	</li>
+	<li>	<a href = "about.html"> About Me </a>	</li>
+	<li>	<a href = "#"> My Work </a>	</li>
+	<li> 	<a href = "#"> Home </a>	</li>
+</ul> <!-- THIS IS THE END OF NAVBAR-->                          <!-- li stands for list element -->
+
+<nav id = "bob">
+	<a href = "#"> Home </a>
+	<a href = "#"> My Work </a>
+	<a href = "about.html"> About Me </a>
+	<a href = "#"> Contact </a>
+	<a href = "minigame.html">Mini Game</a>
+</nav> <!-- THIS IS THE END OF NAVBAR-->
+
+
+<div id= "content">
+	<input id="myInput1">
+	<input id="myInput2">		
+	<button onclick="calculate()"> CLICK ME NOW! </button>
+	<button onclick ="change()">WHAT'S REALLY BELOW?</button>
+
+
+
+<p id = "contentTxt">
+	Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here!
+	Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here!
+	Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! 
+	Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!
+	Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! 
+	Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! 
+	Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! 
+	Enjoy Stephen's website!
+	Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! 
+	Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! 
+	Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website!Placeholder: Content will go here! Enjoy Stephen's website
+</p>
+</div><!-- THIS IS THE END OF THE CONTENT -->
+
+<footer></footer>
+
+</div> <!-- THIS IS THE END OF THE WRAPPER -->
+</body>
+
+</html>
+<!-- COMMENT ANYTHING HERE -->
