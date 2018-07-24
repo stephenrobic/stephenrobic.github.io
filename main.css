@@ -36,6 +36,7 @@ header{
 	width: auto;
 	height: 100px;
 	background-image: url("chipsImage.jpg");
+	background-size: cover;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 }

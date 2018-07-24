@@ -8,8 +8,20 @@
 
 		var nothing = "There's absolutely nothing here yet. Check back soon!!!";
 
+
+		function getMyValue()
+		{
+			beg = "https://www.google.com/maps/place/";
+			end = document.getElementById("mapsearch").value;
+			x = beg + end;
+			document.getElementById("googlemaps").action = x;
+		}
+
 		function change(){
-			document.getElementById("contentTxt").innerHTML = "<p>" + nothing + "</p>";
+			document.getElementById("contentTxt").innerHTML = "Nothing yet! But in the meantime, let's travel the world. What country should we visit?" + 
+			'<form id="googlemaps" onsubmit="getMyValue()" method="get" target="_blank">' +
+			'<input id="mapsearch">' +
+			'<input type="submit" value="DREAM ON"> </form>';
 		}
 
 
@@ -45,7 +57,9 @@
 			} /* Prompt when entering specific things in myInput
 			 defined below and clicking button*/
 
+
 	</script>
+
 </head>
 
 <body>
@@ -79,8 +93,9 @@
 
 <p id = "contentTxt">
 	
-	
 </p>
+
+
 </div><!-- THIS IS THE END OF THE CONTENT -->
 
 <footer></footer>
