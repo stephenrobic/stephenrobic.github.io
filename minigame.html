@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Cool Little Game</title>
+<title>Stress Relief</title>
+<!-- <script type = "text/javascript" src="myScript.js"></script> -->
+<style type = "text/css">
+    .something{width:30px; height: 30px; background-color: green; margin: 0 auto .1cm;}
+    .hiders{width: 600px; height:20px; padding:1cm; border:1px solid blueviolet; font-size: large; margin: 0 auto 10px; background-color: aquamarine;}
+    input[type="button"]{width: 200px; padding:1cm; display: block; margin: 0 auto 1cm;}
+</style>
+
+
+
+
+
+
+
 
 <script type ="text/javascript">
 
+var selectedHiders = [];
 var movement = 0;
 
 function moveSquare(){
     movement += 5;
     document.getElementById("bob").style.position= "relative";
     document.getElementById("bob").style.left = movement + "px";
+}
+
+window.onload=function()
+{
+    smth = document.getElementsByClassName("something");
+    for (var i=0; i<smth.length; i++) 
+    {
+        console.log("There are " + smth.length + " squares");
+
+        smth[i].onmouseover= function()
+        {
+            this.style.backgroundColor = "red";
+        }
+        
+    } 
+    myHiders = document.getElementsByClassName("hiders");
+    for (var i = 0; i<myHiders.length; i++) /* starting at 0 keep on counting until you get all hiders */
+    {
+        myHiders[i].onclick=function() /* for all of the hiders, when I click on you, turn red */
+        {
+            this.style.backgroundColor="red";
+            selectedHiders.push(this.id); /* in the array selectedHiders, push clicked emails ("this" is for i) */
+        }   /* for everyone you click on, send the id (this.id) to the array */
+    }
+}   
+
+
+
+function hide()
+{
+    myHiders = document.getElementsByClassName("hiders");
+    for (var i=0; i<myHiders.length; i++)
+    {
+        for (var j=0; j<selectedHiders.length; j++)
+        {
+            document.getElementById(selectedHiders[j]).style.display="none"; /* Make boxes disappear */
+        }
+    }
+
+
 }
 
 /* document.onkeydown=function(e)
@@ -48,11 +101,38 @@ function moveSquare(){
 
 <body>
 
-    <button onclick = "moveSquare()">MOVE</button>
+    <p>Bare with me as I learn HTML/CSS/Javascript. In the meantime, here's some stuff to do that I'm learning. Peruse and enjoy!</p>
+
+    <button id="squareButton" onclick = "moveSquare()">MOVE</button>
 
     <div id="bob" style ="width:100px; height:100px; background-color:greenyellow;"></div>
 
+    <p>There's more! Move your mouse over the squares below!</p>
+
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+    <div class = "something"></div>
+
+    <p> There's even more below!! </p>
+
+    <input type="button" onclick="hide()" value="HIDE PWEEZE" />
+    <div id="1" class="hiders">Hideme</div>
+    <div id="2" class="hiders">HIdeme</div>
+    <div id="3" class="hiders">HIDeme</div>
+    <div id="4" class="hiders">HIDEme</div>
+    <div id="5" class="hiders">HIDEMe</div>
+    <div id="6" class="hiders">HIDEME</div>
+
     <a href = "index.html"> CLICK ME TO GO HOME </a>
+
+
 
 </body>
 
