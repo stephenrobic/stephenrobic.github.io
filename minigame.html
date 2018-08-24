@@ -1,102 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Stress Relief</title>
-<!-- <script type = "text/javascript" src="myScript.js"></script> -->
-<style type = "text/css">
-    .something{width:30px; height: 30px; background-color: green; margin: 0 auto .1cm;}
-    .hiders{width: 600px; height:20px; padding:1cm; border:1px solid blueviolet; font-size: large; margin: 0 auto 10px; background-color: aquamarine;}
-    input[type="button"]{width: 200px; padding:1cm; display: block; margin: 0 auto 1cm;}
-    body{background-color: black;}
-    p{color: aliceblue;}
-</style>
+    <title>Stress Relief</title>
+    <!-- <script type = "text/javascript" src="myScript.js"></script> -->
+    <style type = "text/css">
+        *{margin: 0; padding: 0;}
+        .something{width:30px; height: 30px; background-color: green; margin: 0 auto .1cm;}
+        .hiders{width: 600px; height:20px; padding:1cm; border:1px solid blueviolet; font-size: large; margin: 0 auto 10px; background-color: aquamarine;}
+        input[type="button"]{width: 200px; padding:1cm; display: block; margin: 0 auto 1cm;}
+        #b2{}
+        #result{font-size: 150%; text-align: center;}
+        body{background-color: black;}
+        p{color: aliceblue;}
+    </style>
 
+    <script type ="text/javascript">
 
+        var selectedHiders = [];
+        var movement = 0;
+        var clicknum = 0;
 
+        function moveSquare(){
+            movement += 5;
+            document.getElementById("bob").style.position= "relative";
+            document.getElementById("bob").style.left = movement + "px";
+        }
 
-
-
-
-
-<script type ="text/javascript">
-
-var selectedHiders = [];
-var movement = 0;
-
-function moveSquare(){
-    movement += 5;
-    document.getElementById("bob").style.position= "relative";
-    document.getElementById("bob").style.left = movement + "px";
-}
-
-window.onload=function()
-{
-    smth = document.getElementsByClassName("something");
-    for (var i=0; i<smth.length; i++) 
-    {
-        console.log("There are " + smth.length + " squares");
-
-        smth[i].onmouseover= function()
+        window.onload=function()
         {
-            this.style.backgroundColor = "red";
+            smth = document.getElementsByClassName("something");
+            for (var i=0; i<smth.length; i++) 
+            {
+                console.log("There are " + smth.length + " squares");
+
+                smth[i].onmouseover= function()
+                {
+                    this.style.backgroundColor = "red";
+                }
+                
+            } 
+            myHiders = document.getElementsByClassName("hiders");
+            for (var i = 0; i<myHiders.length; i++) /* starting at 0 keep on counting until you get all hiders */
+            {
+                myHiders[i].onclick=function() /* for all of the hiders, when I click on you, turn red */
+                {
+                    this.style.backgroundColor="red";
+                    selectedHiders.push(this.id); /* in the array selectedHiders, push clicked emails ("this" is for i) */
+                }   /* for everyone you click on, send the id (this.id) to the array */
+            }
+        }   
+
+
+
+        function hide()
+        {
+            myHiders = document.getElementsByClassName("hiders");
+            for (var i=0; i<myHiders.length; i++)
+            {
+                for (var j=0; j<selectedHiders.length; j++)
+                {
+                    document.getElementById(selectedHiders[j]).style.display="none"; /* Make boxes disappear */
+                }
+            }
+
+
         }
         
-    } 
-    myHiders = document.getElementsByClassName("hiders");
-    for (var i = 0; i<myHiders.length; i++) /* starting at 0 keep on counting until you get all hiders */
-    {
-        myHiders[i].onclick=function() /* for all of the hiders, when I click on you, turn red */
-        {
-            this.style.backgroundColor="red";
-            selectedHiders.push(this.id); /* in the array selectedHiders, push clicked emails ("this" is for i) */
-        }   /* for everyone you click on, send the id (this.id) to the array */
-    }
-}   
-
-
-
-function hide()
-{
-    myHiders = document.getElementsByClassName("hiders");
-    for (var i=0; i<myHiders.length; i++)
-    {
-        for (var j=0; j<selectedHiders.length; j++)
-        {
-            document.getElementById(selectedHiders[j]).style.display="none"; /* Make boxes disappear */
+        function refresh(){
+            switch(clicknum){
+                case 1:    
+                    document.getElementById('result').innerHTML = "You clicked once";
+                    break;      
+                case 10:    
+                    document.getElementById('result').innerHTML = "You clicked 10 times";
+                    break; 
+                case 15:    
+                    document.getElementById('result').innerHTML = "You clicked 15 times";
+                    break;
+                case 20:    
+                    document.getElementById('result').innerHTML = "You clicked 20 timese";
+                    break;
+                case 25:    
+                    document.getElementById('result').innerHTML = "You clicked 25 times";
+                    break;   
+                case 40:    
+                    document.getElementById('result').innerHTML = "You clicked 40 times";
+                    break;   
+                default:
+                    document.getElementById('result').innerHTML = "Keep clicking for satisfaction!!!";
+                    break;
+            }
         }
-    }
 
+        function prompts(){
+            clicknum += 1;
+            refresh();
 
-}
+        }
 
-/* document.onkeydown=function(e)
-{
-    var e=e||window.event;
+        /* document.onkeydown=function(e)
+        {
+            var e=e||window.event;
 
-    if(e.keyCode==65){
-        //move left (A key)
-        movement += 5;
-        document.getElementById("bob").style.position= "relative";
-        document.getElementById("bob").style.left = movement + "px";
-    }
-    if(e.keyCode==68){
-        //move right (D key)
-        movement += 5;
-        document.getElementById("bob").style.position= "relative";
-        document.getElementById("bob").style.right = movement + "px";
-    }
-    if(e.keyCode==87){
-        //move up (W key)
-    }
-    if(e.keyCode==83){
-        //move down (S key)
-        
-    }
-} */
+            if(e.keyCode==65){
+                //move left (A key)
+                movement += 5;
+                document.getElementById("bob").style.position= "relative";
+                document.getElementById("bob").style.left = movement + "px";
+            }
+            if(e.keyCode==68){
+                //move right (D key)
+            movement += 5;
+            document.getElementById("bob").style.position= "relative";
+            document.getElementById("bob").style.right = movement + "px";
+        }
+        if(e.keyCode==87){
+            //move up (W key)
+        }
+        if(e.keyCode==83){
+            //move down (S key)
+            
+        }
+    } */
 
-
-
-</script>
+    </script>
 
 </head>
 
@@ -122,7 +149,7 @@ function hide()
     <div class = "something"></div>
     <div class = "something"></div>
 
-    <p> There's even more below!! </p>
+    <p> There's even more below!! Click the boxes you want to hide, then click the button to hide them. </p>
 
     <input type="button" onclick="hide()" value="HIDE PWEEZE" />
     <div id="1" class="hiders">Hideme</div>
@@ -131,6 +158,12 @@ function hide()
     <div id="4" class="hiders">HIDEme</div>
     <div id="5" class="hiders">HIDEMe</div>
     <div id="6" class="hiders">HIDEME</div>
+
+    <p> And lastly, here's another clicker for stress relif (as I play around with switch statements).</p>
+
+    <p id ="result"></p>
+    <input id="b2" type="button" value="Click Me" onclick="prompts();" />
+
 
     <a href = "index.html"> CLICK ME TO GO HOME </a>
 
