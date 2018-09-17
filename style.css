@@ -70,5 +70,66 @@ li{
     padding-top: 13%;
 }
 .my_banner{
-    background: url()
+    background: url(images/bg.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 90vh;
+}
+.my_dot{
+    background: url(images/dott.png) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 90vh;
+}
+.my_info{
+    text-align: center;
+}
+.my_info h1, .my_info h2, .my_info h3{
+    font-size: 45px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+.my_info p{
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+    margin: 20px auto 40px;
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.my_info ul li{
+    display: inline-block;
+    margin-bottom: 3em;
+}
+.my_info ul li a{
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #212121;
+    font-size: 15px;
+}
+.my_contact, .my_more:hover{
+    border: 2px solid #FFF;
+    color: #ffffff !important;
+    background: none;
+}
+.my_more, .my_contact:hover{
+    border: 2px solid #FFF;
+    color: #000 !important;
+    background: #ffffff;
+}
+.my_info h1 span, .my_info h2 span, .my_info h3 span{
+    font-weight: 700;
+    color: #00bee4;
+}
+@media{
+    .top{
+        margin-top: 80px;
+    }
 }
