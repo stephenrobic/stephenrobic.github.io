@@ -55,9 +55,9 @@ nav.my_navbar{
     outline: 2px solid #0077b5;
 }
 .my_socials a span.fa-github:hover{
-    background-color: #4078c0;
+    background-color: #bd2c00;
     color: #FFF;
-    outline: 2px solid #4078c0;
+    outline: 2px solid #bd2c00;
 }
 .my_socials a span.fa-twitter:hover{
     background-color: #1da1f2;
