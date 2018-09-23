@@ -149,10 +149,10 @@ h3 .text-center{
     color: #000;
     text-transform: capitalize;
 }
-.about{
+#about{
     padding: 20px 0;
 }
-.about h3{
+#about h3{
     margin-bottom: 20px;
     font-size: 40px;
 }
@@ -187,7 +187,7 @@ ul.address_text li a{
     text-align: center;
     margin: 200px 10px 0px;
 }
-.about_right h3{
+#about .about_right h3{ /* needs to be fixed, so lower h3 works correctly */
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 0px;
@@ -212,7 +212,6 @@ ul.address_text li a{
 .about_right{
     padding-left: 4em; 
 }
-
 .about_right ul li a{
     padding: 10px 30px;
     text-decoration: none;
@@ -228,24 +227,21 @@ ul.address_text li a{
     border: 2px solid #333;
     color: #333!important;
     background: none;
-
 }
 .about_more, .about_contact:hover{
     border: 2px solid #333;
     color: #fff!important;
     background: #333;
-
 }
-.my_services{
+#my_services{
     background: url(images/service1.jpeg) no-repeat 0px 0px;
     background-size: cover;
     background-attachment: fixed;
-
 }
-.my_services{
+#my_services{
     padding-top: 40px;
 }
-.my_services h3{
+#my_services h3{
     margin-bottom: 20px;
     font-size: 40px;
     color: #FFF;
@@ -277,7 +273,7 @@ ul.address_text li a{
 .my_icon_grid_gap1{
     margin: 0em 0em 4em 0em;
 }
-.my_services_right_grid h3{
+#my_services .my_services_right_grid h3{
     text-transform: capitalize;
     color: #FFF;
     font-size: 18px;
@@ -301,7 +297,7 @@ ul.address_text li a{
 .more{
     margin: 2em 0;
 }
-.my_skills h3{
+#my_skills h3{
     margin: 40px 0 40px 0;
     font-size: 40px;
 }
