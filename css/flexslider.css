@@ -108,7 +108,7 @@ html[xmlns] .flexslider .slides {
   display: block;
   width: 40px;
   height: 40px;
-  margin: -20px 0 0;
+  margin: -200px 0 0;
   position: absolute;
   top: 50%;
   z-index: 10;
@@ -135,7 +135,7 @@ html[xmlns] .flexslider .slides {
 .flex-control-nav {
   width: 100%;
   position: absolute;
-  bottom: -40px;
+  bottom: -25px;
   text-align: center;
 }
 .flex-control-nav li {
@@ -161,12 +161,14 @@ html[xmlns] .flexslider .slides {
   border-radius: 20px;
 }
 .flex-control-paging li a:hover {
-  background: #333;
-  background: rgba(0, 0, 0, 0.7);
+  /* background: #333;
+  background: rgba(0, 0, 0, 0.7); */
+  background: white;
 }
 .flex-control-paging li a.flex-active {
-  background: #000;
-  background: rgba(0, 0, 0, 0.9);
+  /* background: #000;
+  background: rgba(0, 0, 0, 0.9); */
+  background: white;
   cursor: default;
 }
 .flex-control-thumbs {
