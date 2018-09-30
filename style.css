@@ -156,6 +156,10 @@ h3 .text-center{
     margin-bottom: 20px;
     font-size: 40px;
 }
+
+#about ul.address{
+    padding-top: 1em;
+}
 .about_left{
     background: url(images/about1.png);
     background-size: cover;
@@ -166,6 +170,7 @@ h3 .text-center{
     padding-left: 20px;
     padding-top: 20px;
 }
+
 ul.address_text li{
     display: inline-block;
     color: #eee;
@@ -185,9 +190,9 @@ ul.address_text li a{
     width: 30px;
     height: 30px;  
     text-align: center;
-    margin: 200px 10px 0px;
+    margin: 100px 10px 0px;
 }
-#about .about_right h3{ /* needs to be fixed, so lower h3 works correctly */
+#about .about_right h3{ 
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 0px;
