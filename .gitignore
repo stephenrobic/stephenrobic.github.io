@@ -1,0 +1,7 @@
+#Ignore file names
+stephenrobic.github.io.iml
+
+#Ignore folder names:
+.idea/
+
+#Ignore these fyle types
