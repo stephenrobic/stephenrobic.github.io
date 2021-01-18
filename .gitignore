@@ -3,5 +3,6 @@ stephenrobic.github.io.iml
 
 #Ignore folder names:
 .idea/
+.vscode/
 
 #Ignore these fyle types
