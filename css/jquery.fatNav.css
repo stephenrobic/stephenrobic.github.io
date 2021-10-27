@@ -11,7 +11,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
@@ -22,8 +21,8 @@
 }
 .hamburger__icon, .hamburger__icon:before, .hamburger__icon:after {
   display: block;
-  width: 32px;
-  height: 3px;
+  width: 25px;
+  height: 2px;
   background-color: #1cc7d0;                                    /* COLOR OF NAV BAR */
   -moz-transition-property: background-color, -moz-transform;
   -o-transition-property: background-color, -o-transform;
@@ -39,10 +38,10 @@
   content: "";
 }
 .hamburger__icon:before {
-  top: -10px;
+  top: -7px;
 }
 .hamburger__icon:after {
-  top: 10px;
+  top: 7px;
 }
 .hamburger.active .hamburger__icon {
   background-color: transparent;
@@ -51,16 +50,16 @@
   background-color: #fff;
 }
 .hamburger.active .hamburger__icon:before {
-  -moz-transform: translateY(10px) rotate(45deg);
-  -ms-transform: translateY(10px) rotate(45deg);
-  -webkit-transform: translateY(10px) rotate(45deg);
-  transform: translateY(10px) rotate(45deg);
+  -moz-transform: translateY(7px) rotate(45deg);
+  -ms-transform: translateY(7px) rotate(45deg);
+  -webkit-transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 .hamburger.active .hamburger__icon:after {
-  -moz-transform: translateY(-10px) rotate(-45deg);
-  -ms-transform: translateY(-10px) rotate(-45deg);
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-  transform: translateY(-10px) rotate(-45deg);
+  -moz-transform: translateY(-7px) rotate(-45deg);
+  -ms-transform: translateY(-7px) rotate(-45deg);
+  -webkit-transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .fat-nav {
