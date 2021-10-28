@@ -8,16 +8,22 @@ body{
 body a:hover{
     text-decoration: none;
 }
-nav.my_navbar{
-    padding: .5em 0;
-}
+/*nav.my_navbar{*/
+/*    background: url(../images/cloud.jpg) no-repeat 0 0;*/
+/*    background-size: cover;*/
+/*    padding: .5em 0;*/
+/*}*/
 .logo a{
-    font-size: 38px;
+    font-size: 33px;
     font-weight: 400;
     color: #ff6c5f;
+    text-decoration: none;
+    /*margin:1px;*/
+    /*border: 10vh;*/
+    /*padding: 1px;*/
 }
 .logo a:hover{
-    color: #ff6c5f;
+    color: #6fff5f;
 }
 .logo a span{
     font-weight: 700;
@@ -27,9 +33,20 @@ nav.my_navbar{
 }
 .right{
     float: right;
+    /*margin-right: 5%;*/
 }
 .my_socials{
     margin-top: 12px;
+}
+
+header{
+    /*background: url(../images/cloud.jpg) no-repeat 0 0;*/
+    /*background-size: cover;*/
+}
+
+
+.my_socials{
+    /*margin-top: 18px;*/
 }
 
 .my_socials a span{
@@ -46,7 +63,6 @@ nav.my_navbar{
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
-    -ms-transition: 0.5s all;
     -o-transition: 0.5s all;
 }
 .my_socials a span.fa-linkedin:hover{
@@ -85,51 +101,49 @@ li{
     padding-top: 13%;
 }
 .my_banner{
-    background: url(images/bg.jpg) no-repeat 0px 0px;
+    background: url(../images/bg.jpg) no-repeat 0 0;
     background-size: cover;
+    -webkit-background-size: cover;
     background-attachment: fixed;
-    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 90vh;
+    height: 100vh;
 }
-/* .my_dot{
-    background: url(images/dott.png) no-repeat 0px 0px;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    height: 90vh; 
-} */    
 .my_info{
     text-align: center;
 }
 .my_info h1, .my_info h2, .my_info h3{
-    font-size: 40px;
+    font-size: 20px;
     color: #fff;
     text-transform: uppercase;
     line-height: 1.4em;
-    font-weight: 300;
+    font-weight: 600;
 }
 .my_info p{
-    font-size: 13px;
-    color: #fff;
-    line-height: 28px;
-    margin: 20px auto 40px;
-    width: 80%;
+    font-size: 14px;
+    color: #00bee4;
+    line-height: 22px;
+    margin: 12px auto 22px;
+    width: 100%;
     letter-spacing: 1px;
     text-transform: capitalize;
+    font-weight: 700;
 }
 .my_info ul li{
     display: inline-block;
-    margin-bottom: 3em;
+    /*margin-bottom: 3em;*/
 }
 .my_info ul li a{
-    padding: 10px 30px;
+    padding: 8px 11px 0px 11px;
     text-decoration: none;
     color: #212121;
     font-size: 15px;
+    /*text-align: center;*/
 }
+.my_info ul {
+    padding: 0;
+}
+
 .my_contact, .my_more:hover{
     border: 2px solid #FFF;
     color: #fff !important;
@@ -141,7 +155,7 @@ li{
     background: #fff;
 }
 .my_info h1 span, .my_info h2 span, .my_info h3 span{
-    font-weight: 700;
+    /*font-weight: 700;*/
     color: #00bee4;
 }
 
@@ -161,10 +175,10 @@ h3 .text-center{
     padding-top: 1em;
 }
 .about_left{
-    background: url(images/about.jpg);
+    background: url(../images/about.jpg);
     background-size: cover;
     min-height: 500px;
-    padding: 5em 0em 0em 4em;
+    padding: 5em 0 0 4em;
 }
 .about_pad{
     padding-left: 20px;
@@ -173,14 +187,14 @@ h3 .text-center{
 
 ul.address_text li{
     display: inline-block;
-    color: #eee;
+    color: #00bee4;
     margin-top: 1em;
 }
 ul.address_text li:nth-child(1){
     width: 25%;
 }
 ul.address_text li a{
-    color: #eee;
+    color: #1dc7d0;
 }
 .about_socials a span{
     background: #eee;
@@ -190,12 +204,12 @@ ul.address_text li a{
     width: 30px;
     height: 30px;  
     text-align: center;
-    margin: 100px 10px 0px;
+    margin: 100px 10px 0;
 }
 #about .about_right h3{ 
     font-size: 30px;
     text-transform: uppercase;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #ff6c5f;
     margin: .2em;
 }
@@ -207,7 +221,7 @@ ul.address_text li a{
 .about_right p{
     line-height: 28px;
     color: #212121;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     font-size: 14px;
     text-transform: capitalize;
     padding-top: 1em;
@@ -238,8 +252,15 @@ ul.address_text li a{
     color: #fff!important;
     background: #333;
 }
+#my_projects h1, #my_projects h3 {
+    color: black;
+}
+#my_projects img{
+    border-radius: 10px;
+}
+
 #my_services{
-    background: url(images/service1.jpeg) no-repeat 0px 0px;
+    background: url(../images/service1.jpeg) no-repeat 0 0;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -265,18 +286,18 @@ ul.address_text li a{
     font-size: 2.3em;
     color: #1cc7d0;
     float: left;
-    widows: 40px;
+    widows: 40;
 }
 .my_services_left_grid, .my_icon_grid1 p{
     font-size: 14px;
     line-height: 28px;
-    letter-spacing: 0, 5px;
+    letter-spacing: normal;
     text-transform: capitalize;
     color: #ccc;
-    padding: 0 0em;
+    padding: 0 0;
 }
 .my_icon_grid_gap1{
-    margin: 0em 0em 4em 0em;
+    margin: 0 0 4em 0;
 }
 #my_services .my_services_right_grid h3{
     text-transform: capitalize;
@@ -311,7 +332,7 @@ ul.address_text li a{
     color: #232323;
     letter-spacing: 1px;
     margin-bottom: 1.4em;
-    padding-bottom: 0em;
+    padding-bottom: 0;
     position: relative;
 }
 .bar-grids h4:after{
@@ -327,7 +348,7 @@ ul.address_text li a{
     font-size: 1.2em;
     color: #000;
     text-transform: uppercase;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 .bar-grids p{
     font-size: 14px;
@@ -402,8 +423,8 @@ footer{
     font-size: 1em;
     text-align: center;
     font-weight: bold;
-    /* background: url(images/cloud.jpg) no-repeat 0px 0px;
-    background-size: cover; */
+    background: url(../images/cloud.jpg) no-repeat 0 0;
+    background-size: cover;
     bottom: 0;
     left: 0;
     width: 100%;
