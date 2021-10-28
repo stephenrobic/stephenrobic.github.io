@@ -12,9 +12,9 @@
     <!-- ==============================================
     CSS
     =============================================== -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.fatNav.css">
     <link rel="stylesheet" type="text/css" href="css/flexslider.css">
     <!-- <script src="main.js"></script> -->
@@ -29,6 +29,7 @@
 </head>
 
 <body>
+<header>
     <nav class="my_navbar">
         <div class="container">
             <div class ="logo">
@@ -39,9 +40,6 @@
             <div class="right">
                 <div class="my_socials">
                     <ul>
-                        <!-- <li>
-                            <a href=""><span class="fab fa-facebook-f"></span></a>
-                        </li> -->
                         <li>
                             <a href="https://www.linkedin.com/in/stephenrobicheaux/"><span class="fab fa-linkedin"></span></a>
                         </li>
@@ -54,9 +52,11 @@
                     </ul>
                 </div>
             </div>
+            </div>
         </div>
     </nav>
-    <div class="fat-nav">
+    </header>
+<div class="fat-nav">
         <div class="fat-nav__wrapper">
             <ul>
                 <li><a href="#top">Home</a></li>
@@ -69,10 +69,9 @@
             </ul>
         </div>
     </div>
-
     <div class="top">
         <div class="my_banner">
-            <div class="my_dot">
+<!--            <div class="my_dot">-->
                 <div class="container pad">
                     <div class="flexslider col-md-6">
                         <ul class="slides">
@@ -124,7 +123,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+<!--                </div>-->
             </div>
         </div>
     </div>
@@ -364,19 +363,18 @@
     <footer><p>&copy; 2021/All Rights Reserved By Stephen Robicheaux. </p> </footer>
     
 
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
     <script type="text/javascript" src="js/jquery.fatNav.js"></script>
-        <script>
-            (function(){
-
-                $.fatNav();
-
-            }());
-        </script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
     <script type="text/javascript">
-        $(window).load(function(){
+        (function(){
+            $.fatNav();
+        }());
+    </script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+        $(window).on("load", function(){
             $('.flexslider').flexslider({
                 animation: "slide"
             });
