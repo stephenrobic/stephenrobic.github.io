@@ -8,16 +8,21 @@ body{
 body a:hover{
     text-decoration: none;
 }
-nav.my_navbar{
-    /*background: url(../images/cloud.jpg) no-repeat 0 0;*/
-    /*background-size: cover;*/
-    padding: .5em 0;
-}
+
+/*nav.my_navbar{*/
+/*    background: url(../images/cloud.jpg) no-repeat 0 0;*/
+/*    background-size: cover;*/
+/*    padding: .5em 0;*/
+/*}*/
+
 .logo a{
-    font-size: 38px;
+    font-size: 33px;
     font-weight: 400;
     color: #ff6c5f;
     text-decoration: none;
+    /*margin:1px;*/
+    /*border: 10vh;*/
+    /*padding: 1px;*/
 }
 .logo a:hover{
     color: #6fff5f;
@@ -30,6 +35,7 @@ nav.my_navbar{
 }
 .right{
     float: right;
+    /*margin-right: 5%;*/
 }
 .my_socials{
     margin-top: 12px;
@@ -106,38 +112,43 @@ li{
     background-attachment: fixed;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 90vh;
+    height: 100vh;
 }
 .my_info{
     text-align: center;
 }
 .my_info h1, .my_info h2, .my_info h3{
-    font-size: 40px;
+    font-size: 20px;
     color: #fff;
     text-transform: uppercase;
     line-height: 1.4em;
-    font-weight: 300;
+    font-weight: 600;
 }
 .my_info p{
-    font-size: 20px;
-    color: #fff;
-    line-height: 28px;
-    margin: 20px auto 40px;
-    width: 80%;
+    font-size: 14px;
+    color: #00bee4;
+    line-height: 22px;
+    margin: 12px auto 22px;
+    width: 100%;
     letter-spacing: 1px;
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 700;
 }
 .my_info ul li{
     display: inline-block;
-    margin-bottom: 3em;
+    /*margin-bottom: 3em;*/
 }
 .my_info ul li a{
-    padding: 10px 30px;
+    padding: 8px 11px 0 11px;
     text-decoration: none;
     color: #212121;
     font-size: 15px;
+    /*text-align: center;*/
 }
+.my_info ul {
+    padding: 0;
+}
+
 .my_contact, .my_more:hover{
     border: 2px solid #FFF;
     color: #fff !important;
@@ -149,7 +160,7 @@ li{
     background: #fff;
 }
 .my_info h1 span, .my_info h2 span, .my_info h3 span{
-    font-weight: 700;
+    /*font-weight: 700;*/
     color: #00bee4;
 }
 
@@ -181,14 +192,14 @@ h3 .text-center{
 
 ul.address_text li{
     display: inline-block;
-    color: #eee;
+    color: #00bee4;
     margin-top: 1em;
 }
 ul.address_text li:nth-child(1){
     width: 25%;
 }
 ul.address_text li a{
-    color: #eee;
+    color: #1dc7d0;
 }
 .about_socials a span{
     background: #eee;
@@ -246,6 +257,13 @@ ul.address_text li a{
     color: #fff!important;
     background: #333;
 }
+#my_projects h1, #my_projects h3 {
+    color: black;
+}
+#my_projects img{
+    border-radius: 10px;
+}
+
 #my_services{
     background: url(../images/service1.jpeg) no-repeat 0 0;
     background-size: cover;
