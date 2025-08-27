@@ -117,7 +117,11 @@ li{
 .my_info{
     text-align: center;
 }
-.my_info h1, .my_info h2, .my_info h3{
+.my_info h1 span, .my_info h2 span, .my_info h3 span{
+    /*font-weight: 700;*/
+    color: #04f11f;
+}
+.my_info h1{
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
@@ -126,7 +130,7 @@ li{
 }
 .my_info p{
     font-size: 14px;
-    color: #00bee4;
+    color: #04f11f;
     line-height: 22px;
     margin: 12px auto 22px;
     width: 100%;
@@ -158,10 +162,6 @@ li{
     border: 2px solid #FFF;
     color: #000 !important;
     background: #fff;
-}
-.my_info h1 span, .my_info h2 span, .my_info h3 span{
-    /*font-weight: 700;*/
-    color: #00bee4;
 }
 
 h3 .text-center{
