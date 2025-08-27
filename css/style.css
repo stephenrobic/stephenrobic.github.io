@@ -10,7 +10,6 @@ body a:hover{
 }
 
 /*nav.my_navbar{*/
-/*    background: url(../images/cloud.jpg) no-repeat 0 0;*/
 /*    background-size: cover;*/
 /*    padding: .5em 0;*/
 /*}*/
@@ -42,7 +41,6 @@ body a:hover{
 }
 
 header{
-    /*background: url(../images/cloud.jpg) no-repeat 0 0;*/
     background-size: cover;
 }
 
@@ -192,14 +190,14 @@ h3 .text-center{
 
 ul.address_text li{
     display: inline-block;
-    color: #00bee4;
+    color: #04f11f;
     margin-top: 1em;
 }
 ul.address_text li:nth-child(1){
     width: 25%;
 }
 ul.address_text li a{
-    color: #1dc7d0;
+    color: #04f11f;
 }
 .about_socials a span{
     background: #eee;
@@ -422,13 +420,12 @@ ul.address_text li a{
 }
 .grid6 span.fas{
     color: #ff4f81;
-    border: 2px solid #ff4f81;  
+    border: 2px solid #ff4f81;
 }
 footer{
     font-size: 1em;
     text-align: center;
     font-weight: bold;
-    background: url(../images/cloud.jpg) no-repeat 0 0;
     background-size: cover;
     bottom: 0;
     left: 0;
@@ -438,6 +435,12 @@ footer{
     border-bottom-right-radius: 15px;
 }
 
+/* Accessible focus styles */
+a:focus, button:focus {
+    outline: 2px solid #0ea5a8; /* teal outline */
+    outline-offset: 2px;
+}
+a:focus:not(:focus-visible), button:focus:not(:focus-visible) { outline: none; }
 
 @media(max-width:920px){
     .top{
