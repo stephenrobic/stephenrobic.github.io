@@ -150,19 +150,48 @@
     .pillrow{
       display:flex;
       flex-wrap:wrap;
-      gap: 10px;
-      margin: 16px 0 22px;
+      gap:12px;
+      margin: 18px 0 26px;
     }
-
+    
     .pill{
-      padding: 8px 10px;
+      padding: 10px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
-      color: rgba(255,255,255,.78);
-      font-size: 13px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(10px);
+    
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: rgba(255,255,255,0.88);
+    
+      box-shadow:
+        0 6px 18px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.10);
+    
+      position: relative;
+      overflow: hidden;
+    
+      transition: transform 0.15s ease, border-color 0.15s ease;
     }
-
+    
+    .pill:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(
+        circle at top left,
+        rgba(125,211,252,0.18),
+        transparent 60%
+      );
+      pointer-events:none;
+    }
+    
+    .pill:hover{
+      transform: translateY(-2px);
+      border-color: rgba(125,211,252,0.45);
+    }
     .cta{
       display:flex;
       flex-wrap:wrap;
@@ -246,6 +275,16 @@
       position:relative;
       z-index:1;
     }
+    .footer-link{
+      color: rgba(255,255,255,0.70);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .footer-link:hover{
+      color: rgba(125,211,252,0.95);
+      text-decoration: underline;
+    }
 
     .mono{
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -299,25 +338,25 @@
         <div>
           <div class="badge">
             <span class="dot" aria-hidden="true"></span>
-            Portfolio refresh in progress • modernizing everything
+            PORTFOLIO REFRESH IN PROGRESS
           </div>
 
           <h1>
-            Stephen Robicheaux — <span class="grad">tech + data</span><br/>
-            with a finance-minded lens.
+            Stephen Robicheaux <span class="grad">tech + data + finance</span><br/>
           </h1>
 
           <p class="sub">
-            I’m rebuilding this site with updated projects, analytics work, and practical tools for business decisions.
-            I’m focused on sharpening skills, landing data roles, and building toward an MBA + long-term investing goals.
+            I’m rebuilding this site with updated projects, analytics work, and practical tools for your use!
+            I’m transitioning into data-driven roles where I can combine my mathematics foundation, 
+            software engineering background, and operational logistics experience with a people-first approach 
+            to solve meaningful problems and drive better decisions.
           </p>
 
-          <div class="pillrow" aria-label="Focus areas">
-            <span class="pill">Python • SQL • Excel</span>
-            <span class="pill">Business analytics</span>
-            <span class="pill">Finance & investing curiosity</span>
-            <span class="pill">Math-first problem solving</span>
-          </div>
+          <!-- <div class="pillrow" aria-label="Focus areas">
+            <span class="pill">AWS • APIs • Git</span>
+            <span class="pill">Python • Pandas • SQL • Erlang </span>
+            <span class="pill">Excel • Modeling • Analytics</span>
+          </div> -->
 
           <div class="cta" aria-label="Primary links">
             <a class="btn primary" href="mailto:stephenrobic@gmail.com">
@@ -325,7 +364,7 @@
                 <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" opacity=".9"/>
                 <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2"/>
               </svg>
-              Email me
+              Email Me
             </a>
 
             <a class="btn" href="https://www.linkedin.com/in/stephenrobicheaux/" target="_blank" rel="noopener">
@@ -352,34 +391,38 @@
           <div class="kv">
             <div class="row">
               <div class="k">Now</div>
-              <div class="v">Rebuilding portfolio & polishing skills</div>
+              <div class="v">Seeking Employment While Polishing Skills</div>
             </div>
-            <div class="row">
-              <div class="k">Near-term focus</div>
-              <div class="v">Landing a data role (ASAP)</div>
-            </div>
+            <!-- <div class="row">
+              <div class="k">In Progress</div>
+              <div class="v">Landing a Role (ASAP)</div>
+            </div> -->
             <div class="row">
               <div class="k">Long-term</div>
-              <div class="v">MBA + investing</div>
+              <div class="v">Data Analytics Focused MBA(</div>
             </div>
             <div class="row">
               <div class="k">Current toolkit</div>
-              <div class="v">Python · SQL · Excel</div>
+              <div class="v">Python · Pandas · SQL · Excel · AWS · Django · Git</div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <div class="k">Also</div>
               <div class="v">Operations mindset • real-world grit</div>
-            </div>
+            </div> -->
           </div>
 
           <div style="margin-top:14px; color: var(--muted2); font-size: 13px; line-height: 1.55;">
-            If you want a résumé or a quick project rundown, email me — I’ll send it over.
+            If you’d like a résumé or overview of my work, feel free to reach out by email.
           </div>
         </aside>
       </div>
 
       <div class="footer">
-        <div class="mono">stephenrobic.github.io</div>
+        <div class="mono">
+          <a href="mailto:stephenrobic@gmail.com" class="footer-link">
+            stephenrobic@gmail.com
+          </a>
+        </div>
         <div>© <span id="year"></span> Stephen Robicheaux</div>
       </div>
     </section>
